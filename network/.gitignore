@@ -1,5 +1,6 @@
 docker-compose-e2e.yaml
 docker-compose-cas.yaml
 
-/network/channel-artifacts/*.tx
-/network/crypto-config/
+channel-artifacts/*.tx
+channel-artifacts/genesis.block
+crypto-config/
