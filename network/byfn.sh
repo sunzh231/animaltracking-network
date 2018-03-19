@@ -86,7 +86,7 @@ function askProceed () {
 # Obtain CONTAINER_IDS and remove them
 # TODO Might want to make this optional - could clear other containers
 function clearContainers () {
-  CONTAINER_IDS=$(docker ps -aq)
+  CONTAINER_IDS=$(docker ps -aq|grep -vE '(c7126c148a4a|b572df7b88bf)')
   if [ -z "$CONTAINER_IDS" -o "$CONTAINER_IDS" == " " ]; then
     echo "---- No containers available for deletion ----"
   else
