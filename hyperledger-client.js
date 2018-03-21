@@ -18,7 +18,7 @@ const HyperledgerClient = function() {
     } else {
       console.log('HyperLedgerClient.prepare(): create new business network connection');
       vm.businessNetworkConnection = new BusinessNetworkConnection();
-      const connectionProfile = 'byfn-network-org1';
+      const connectionProfile = 'alice@animaltracking-network';
       const businessNetworkIdentifier = 'animaltracking-network';
       const participantId = 'alice';
       const participantPwd = 'secret';
