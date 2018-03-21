@@ -1,0 +1,282 @@
+<div class="modal fade" id="addAssetModal" tabindex="-1" role="dialog" aria-labelledby="addAssetModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="addAssetModalLabel">Add Asset</h4>
+      </div>
+      <form [formGroup]="myForm">
+        <div class="modal-body">
+
+
+          
+
+            
+              <div class="form-group text-left">
+                <label for="sbi">sbi</label>
+                
+                  <input formControlName="sbi" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="address1">address1</label>
+                
+                  <input formControlName="address1" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="address2">address2</label>
+                
+                  <input formControlName="address2" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="county">county</label>
+                
+                  <input formControlName="county" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="postcode">postcode</label>
+                
+                  <input formControlName="postcode" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="owner">owner</label>
+                
+                    <textarea formControlName="owner" class="form-control" rows="3"></textarea>
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="incomingAnimals">incomingAnimals</label>
+                
+                    <textarea formControlName="incomingAnimals" class="form-control" rows="3"></textarea>
+                
+              </div>
+            
+          
+
+        </div>
+        <div class="modal-footer">
+          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="updateAssetModal" tabindex="-1" role="dialog" aria-labelledby="updateAssetModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="updateAssetModalLabel">Update Asset</h4>
+      </div>
+      <form [formGroup]="myForm">
+        <div class="modal-body">
+
+
+          
+            <div class="form-group text-left">
+              <label for="sbi">sbi</label>
+
+              
+                <input [ngModel]="sbi"formControlName="sbi" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="address1">address1</label>
+
+              
+                <input [ngModel]="address1"formControlName="address1" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="address2">address2</label>
+
+              
+                <input [ngModel]="address2"formControlName="address2" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="county">county</label>
+
+              
+                <input [ngModel]="county"formControlName="county" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="postcode">postcode</label>
+
+              
+                <input [ngModel]="postcode"formControlName="postcode" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="owner">owner</label>
+
+              
+                
+                  <textarea [ngModel]="owner" formControlName="owner" class="form-control" rows="3"></textarea>
+                
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="incomingAnimals">incomingAnimals</label>
+
+              
+                
+                  <textarea [ngModel]="incomingAnimals" formControlName="incomingAnimals" class="form-control" rows="3"></textarea>
+                
+              
+
+            </div>
+          
+
+
+        </div>
+        <div class="modal-footer">
+          <button (click)="updateAsset(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="deleteAssetModal" tabindex="-1" role="dialog" aria-labelledby="deleteAssetModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="deleteAssetModalLabel">Delete Asset</h4>
+      </div>
+      <form [formGroup]="myForm" (ngSubmit)="deleteAsset()">
+        <div class="modal-body">
+          Are you sure you want to delete this asset?
+        </div>
+        <div class="modal-footer">
+          <button (click)="deleteAsset()" type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+	<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+		<strong>Error:</strong> {{errorMessage}}
+	</div>
+  <h1 id='assetName'>Business</h1>
+  <div class="row">
+    <div class="col-md-12 text-right">
+      <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAssetModal">Add Asset</button>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-responsive table-striped">
+        <thead class="thead">
+          <tr class="thead-cols">
+            
+                <th class="info">sbi</th>
+            
+                <th class="info">address1</th>
+            
+                <th class="info">address2</th>
+            
+                <th class="info">county</th>
+            
+                <th class="info">postcode</th>
+            
+                <th class="info">owner</th>
+            
+                <th class="info">incomingAnimals</th>
+            
+              <th class="info">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asset of allAssets">
+
+            
+                <td>{{asset.sbi}}</td>
+            
+                <td>{{asset.address1}}</td>
+            
+                <td>{{asset.address2}}</td>
+            
+                <td>{{asset.county}}</td>
+            
+                <td>{{asset.postcode}}</td>
+            
+                <td>{{asset.owner}}</td>
+            
+                <td>{{asset.incomingAnimals}}</td>
+            
+            <td>
+              <button (click)="getForm(asset.sbi);" type="button" class="btn btn-success" data-toggle="modal" data-target="#updateAssetModal">Update Asset</button>
+
+              <button (click)="setId(asset.sbi);" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteAssetModal">Delete Asset</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

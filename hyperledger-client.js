@@ -22,7 +22,7 @@ const HyperledgerClient = function() {
       const businessNetworkIdentifier = 'animaltracking-network';
       const participantId = 'farmer_test';
       const participantPwd = 'AwPjSsRoTXCW';
-      return vm.businessNetworkConnection.connectWithDetails(connectionProfile, businessNetworkIdentifier, participantId, participantPwd)
+      return vm.businessNetworkConnection.connect(connectionProfile, businessNetworkIdentifier, participantId, participantPwd)
       .then(result => {
         console.log(result);
         vm.businessNetworkDefinition = result;
