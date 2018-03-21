@@ -164,7 +164,7 @@ console.log('12312')
 
 
 var port = appEnv.port || 3002;
-app.listen( port );
+app.listen(3002);
 console.log( "server starting on " + port + " ..." );
 
 
