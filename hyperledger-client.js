@@ -19,7 +19,7 @@ const HyperledgerClient = function() {
       console.log('HyperLedgerClient.prepare(): create new business network connection');
       vm.businessNetworkConnection = new BusinessNetworkConnection();
       const connectionProfile = 'farmer_test';
-      const businessNetworkIdentifier = 'farmer_test';
+      const businessNetworkIdentifier = 'animaltracking-network@0.0.1';
       const participantId = 'farmer_test';
       const participantPwd = 'AwPjSsRoTXCW';
       return vm.businessNetworkConnection.connect(connectionProfile, businessNetworkIdentifier, participantId, participantPwd)
