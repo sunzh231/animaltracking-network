@@ -29,6 +29,7 @@ const HyperledgerClient = function() {
         resolved();
       }).catch(error => {
         console.log('HyperLedgerClient.prepare(): reject');
+        console.log(error)
         rejected(error);
       });
     }
