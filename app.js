@@ -3,16 +3,16 @@
 // //. Run following command to deploy business network before running this app.js
 // //. $ composer network deploy -p hlfv1 -a ./my-simple-network.bna -i PeerAdmin -s secret
 
-console.log('12312')
+var express = require( 'express' ),
+    cfenv = require( 'cfenv' ),
+    multer = require( 'multer' ),
+    bodyParser = require( 'body-parser' ),
+    fs = require( 'fs' ),
+    ejs = require( 'ejs' ),
+    app = express();
+var appEnv = cfenv.getAppEnv();
 
-// var express = require( 'express' ),
-//     cfenv = require( 'cfenv' ),
-//     multer = require( 'multer' ),
-//     bodyParser = require( 'body-parser' ),
-//     fs = require( 'fs' ),
-//     ejs = require( 'ejs' ),
-//     app = express();
-// var appEnv = cfenv.getAppEnv();
+console.log('12312')
 
 // const HyperledgerClient = require( './hyperledger-client' );
 // const client = new HyperledgerClient();
@@ -163,8 +163,8 @@ console.log('12312')
 // */
 
 
-// var port = appEnv.port || 3000;
-// app.listen( port );
-// console.log( "server starting on " + port + " ..." );
+var port = appEnv.port || 3002;
+app.listen( port );
+console.log( "server starting on " + port + " ..." );
 
 
