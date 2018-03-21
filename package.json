@@ -8,7 +8,6 @@
   "networkImage":"https://hyperledger.github.io/composer-sample-networks/packages/animaltracking-network/networkimage.svg",
   "networkImageanimated":"https://hyperledger.github.io/composer-sample-networks/packages/animaltracking-network/networkimageanimated.svg",
   "scripts":{
-    "prepublish":"mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/animaltracking-network.bna",
     "pretest":"npm run lint",
     "test":"mocha -t 0 --recursive",
     "lint":"eslint .",
