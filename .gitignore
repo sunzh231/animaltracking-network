@@ -1,2 +1,4 @@
 /node_modules/
 /composer-logs/
+
+yarn-error.log
