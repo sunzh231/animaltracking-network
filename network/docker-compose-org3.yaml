@@ -55,7 +55,7 @@ services:
 
   Org3cli:
     container_name: Org3cli
-    image: hyperledger/fabric-tools:x86_64-1.0.6
+    image: hyperledger/fabric-tools:x86_64-1.1.0
     tty: true
     environment:
       - GOPATH=/opt/gopath

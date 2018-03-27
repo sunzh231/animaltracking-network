@@ -9,9 +9,9 @@ import 'rxjs/Rx';
 export class BusinessService {
 
 	
-		private NAMESPACE: string = 'com.biz.Business';
-	
-
+    // private NAMESPACE: string = 'com.biz.Business';
+    
+    private NAMESPACE: string = 'business';
 
 
     constructor(private dataService: DataService<Business>) {

@@ -9,10 +9,9 @@ import 'rxjs/Rx';
 export class FieldService {
 
 	
-		private NAMESPACE: string = 'com.biz.Field';
+    // private NAMESPACE: string = 'com.biz.Field';
+    private NAMESPACE: string = 'field';
 	
-
-
 
     constructor(private dataService: DataService<Field>) {
     };

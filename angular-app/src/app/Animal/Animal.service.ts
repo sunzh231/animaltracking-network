@@ -9,8 +9,8 @@ import 'rxjs/Rx';
 export class AnimalService {
 
 	
-		private NAMESPACE: string = 'com.biz.Animal';
-	
+		// private NAMESPACE: string = 'com.biz.Animal';
+    private NAMESPACE: string = 'animal';
 
 
 

@@ -376,6 +376,7 @@ if [ "${IF_COUCHDB}" == "couchdb" ]; then
   ADDITIONS="${ADDITIONS} and using database '${IF_COUCHDB}'"
 fi
 if [ "${IF_CAS}" == "1" ]; then
+  echo '11111'
   ADDITIONS="${ADDITIONS} and using Fabric CAs"
 fi
 echo "${EXPMODE} with channel '${CHANNEL_NAME}' and CLI timeout of '${CLI_TIMEOUT}' seconds and CLI delay of '${CLI_DELAY}' seconds${ADDITIONS}"
